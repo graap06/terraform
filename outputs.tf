@@ -4,8 +4,3 @@
 output "web_server_public_ips" {
   value = [for instance in aws_instance.web_server : instance.public_ip]
 }
-
-output "instance_ami" {
-  description = "AMI used to create the EC2 instance."
-  value       = aws_instance.app_server.ami
-}
